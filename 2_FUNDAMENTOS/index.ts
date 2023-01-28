@@ -48,3 +48,15 @@ let inf = "Teste"
 
 // inf = 1
 // ann = 1
+
+console.log("Testando")
+
+// 5 - desafio 2
+
+const n1: number = 10
+
+const numberToString = n1.toString()
+
+const printMyNumber: string = `Eu vou imprimir o número ${numberToString}`
+
+console.log(printMyNumber)
