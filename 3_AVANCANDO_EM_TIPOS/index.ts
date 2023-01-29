@@ -184,3 +184,30 @@ function showDirection (direction: "left" | "right" | "center" ){
 showDirection("left")
 
 //showDirection("top")
+
+// 16 - non null assertion operators, verifica de determinado elemento existe no DOM
+const p = document.getElementById("some-p")
+
+console.log(p?.innerText)
+
+// 17 - bigint
+
+let n: bigint
+
+//n = 1
+
+n = 1000n
+
+console.log(n)
+
+console.log(typeof n)
+
+console.log(n + 100n)
+
+// 18 - symbol
+
+let symbolA: symbol = Symbol("a")
+let symbolB = Symbol("a")
+
+console.log(symbolA == symbolB)
+console.log(symbolA === symbolB)
