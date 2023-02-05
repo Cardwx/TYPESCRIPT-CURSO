@@ -1,6 +1,7 @@
-var fisrtName = "Lucas";
-var anotherName = 1;
-var x = true;
+"use strict";
+const fisrtName = "Lucas";
+const anotherName = 1;
+const x = true;
 function greeting(name) {
     console.log("Olá " + name);
 }
