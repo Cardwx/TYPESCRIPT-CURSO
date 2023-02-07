@@ -28,3 +28,20 @@ const fusca = {
     wheels: 4
 };
 console.log(fusca);
+let coords = {
+    x: 10
+};
+coords.y = 15;
+console.log(coords);
+const matheus = {
+    name: "Lucas",
+    age: 30
+};
+console.log(matheus);
+const goku = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["kamehameha", "genki dama"]
+};
+console.log(goku);
+console.log(goku.superpowers);

@@ -43,7 +43,7 @@ showUserDetail(u1)
 showUserDetail(u2)
 
 // 3 - readonly
-
+// objetos não mudam as propriedades
 interface Car {
     brand: string
     readonly wheels: number
@@ -55,3 +55,46 @@ const fusca: Car = {
 }
 
 console.log(fusca)
+
+// 4 - index signature - quando não sabemos o nome das chaves mas sabemos os tipos
+interface CoordObject{
+    [index: string] : number
+}
+
+let coords: CoordObject = {
+    x: 10
+}
+
+coords.y = 15
+
+console.log(coords)
+
+
+// 5 - extending types - herdar propriedades de outras interfaces
+
+interface Human{
+    name:string
+    age: number
+}
+
+interface SuperHuman extends Human{
+    superpowers: string[]
+}
+
+const matheus: Human = {
+    name: "Lucas",
+    age: 30
+}
+
+
+console.log(matheus)
+
+const goku: SuperHuman = {
+    name: "Goku",
+    age: 50,
+    superpowers: ["kamehameha", "genki dama" ]
+}
+
+console.log(goku)
+
+console.log(goku.superpowers)
