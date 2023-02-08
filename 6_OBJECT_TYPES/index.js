@@ -45,3 +45,15 @@ const goku = {
 };
 console.log(goku);
 console.log(goku.superpowers);
+const arnold = {
+    name: "Arnold",
+    type: "shotgun",
+    caliber: 12
+};
+console.log(arnold);
+console.log(arnold.caliber);
+// 7 - readonly com arrays, seguimos a mesma filosofia do reaonly normal, porém definimos que não poderá ser acrescentado nada ao array e nem removido ao não ser por metodos
+let meuArray = ["maça", "pera", "abacaxi"];
+// percebe-se que dessa maneira abaixo não podemos acrescentar o item no array, devido termos atribuido o readonly
+// meuArray[3] = "Fruta"
+console.log(meuArray);

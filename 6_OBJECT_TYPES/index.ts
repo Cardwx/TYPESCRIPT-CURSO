@@ -98,3 +98,39 @@ const goku: SuperHuman = {
 console.log(goku)
 
 console.log(goku.superpowers)
+
+// 6 -intersection types
+
+// se resume na união de duas interfaces para criação de uma nova, ou seja, suponhamos que eu criei as interfaces tofa e neli com seus respectivos atributos,
+// com isso, ao criar a classe que vai herdar as duas interfaces terá o seguinte padrão  types Tofanelli = Tofa & neli (& serve justamente para concatenar)
+
+interface Personagem {
+    name: string
+}
+
+interface Arma {
+    type: string,
+    caliber: number
+}
+
+// Aqui criamos a classe pai
+
+type HumanoComArma = Personagem & Arma
+
+const arnold: HumanoComArma = {
+    name: "Arnold",
+    type: "shotgun",
+    caliber: 12
+}
+
+console.log(arnold)
+console.log(arnold.caliber)
+
+
+// 7 - readonly com arrays, seguimos a mesma filosofia do reaonly normal, porém definimos que não poderá ser acrescentado nada ao array e nem removido ao não ser por metodos
+
+let meuArray: ReadonlyArray<string> = ["maça", "pera", "abacaxi"]
+
+// percebe-se que dessa maneira abaixo não podemos acrescentar o item no array, devido termos atribuido o readonly
+// meuArray[3] = "Fruta"
+console.log(meuArray)
