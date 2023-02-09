@@ -134,3 +134,38 @@ let meuArray: ReadonlyArray<string> = ["maça", "pera", "abacaxi"]
 // percebe-se que dessa maneira abaixo não podemos acrescentar o item no array, devido termos atribuido o readonly
 // meuArray[3] = "Fruta"
 console.log(meuArray)
+
+// 8 - tuplas com arrays
+// utilizado com intuito de dar confiabilidade ao código, geramos o array e desestruturamos em seguida tipando cada um dos seus atributos
+
+type fiveNumbers = [number, number, number, number, number]
+
+// essa a estrututa de declaração correta seguindo o padrão acima
+const myNumberArray: fiveNumbers = [1, 2, 3, 4, 5]
+// veja que no exemplo abaixo se declararmos variáveis a mais ou sem ser do padrão number, o ts apresentará a mensagem de erro
+// const myNumberArray2: fiveNumbers = [1, 2, 3, 4, 5, 8, 0]
+
+console.log(myNumberArray)
+
+type nameAndAge = [string, number]
+
+const anotherUser: nameAndAge = ["tofa", 1234]
+
+console.log(anotherUser)
+
+// podemos alterar normalmente o valor no indice, desde que seja o mesmo valor
+anotherUser[0] = "marcio"
+console.log(anotherUser[0])
+
+// aqui ele já gera erro dizendo que o tipo está errado, pois na declaração acima deveria ser number
+// anotherUser[1] = "teste"
+
+// 9 - tuplas com readonly
+// segue o mesmo esquema do readonly classico, se tentarmos modificarmos algum elemento ele não permitirá
+function showNumbers(numbers: readonly [number, number]) {
+    // numbers[0] = 10
+    console.log(numbers[0])
+    console.log(numbers[1])
+}
+
+showNumbers ([1, 2])
